@@ -22,10 +22,11 @@ export default {
 <style>
 .card {
     background-color: rgb(187, 168, 129);
+    height: 500px;
+    margin: 10px auto;
 }
 
-.img {
-    width: 50vh
-    height: 50vh;
+img {
+    width:80%
 }
 </style>

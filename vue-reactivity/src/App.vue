@@ -11,5 +11,5 @@
 
 <style>
 #app{
-  font-family: 'Mali', cursive;;
+  font-family: 'Mali', cursive;
 }</style>

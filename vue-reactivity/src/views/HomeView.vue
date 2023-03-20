@@ -1,11 +1,12 @@
 <template>
 <div class="home">
-<Card v-for="menu in menu" 
-:key="menu.name, menu.price, menu.img, menu.info"
-:name="menu.name"
-:price="menu.price"
-:img="menu.img"
-:info="menu.info"/>
+<Card 
+v-for="foods in menu" 
+:key="foods.name"
+:name="foods.name"
+:price="foods.price"
+:img="foods.img"
+:info="foods.info"/>
 </div>
 </template>
 
