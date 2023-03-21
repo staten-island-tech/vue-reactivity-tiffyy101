@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <h2>{{ name }}</h2>
-        <h3>{{ price }}</h3>
+        <h3>${{ price }}</h3>
         <img :src="img" alt="" />
         <p>{{ info }}</p>
     </div>
@@ -27,6 +27,6 @@ export default {
 }
 
 img {
-    width:80%
+    width:40vh
 }
 </style>

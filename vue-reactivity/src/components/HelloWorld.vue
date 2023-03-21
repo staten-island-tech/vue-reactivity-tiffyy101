@@ -3,7 +3,11 @@ defineProps({
   msg: {
     type: String,
     required: true
-  }
+  },
+  list: {
+    type: Array,
+    required: true,
+  },
 })
 </script>
 
