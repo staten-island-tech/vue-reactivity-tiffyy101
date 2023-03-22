@@ -1,9 +1,12 @@
+import ShoppingCart from
+
 <template>
     <div class="card">
         <h2>{{ name }}</h2>
         <h3>${{ price }}</h3>
         <img :src="img" alt="" />
         <p>{{ info }}</p>
+        <button>Add</button>
     </div>
 </template>
 
@@ -16,17 +19,27 @@ export default {
         img: String,
         info: String,
     },
+
+data() {
+    return{
+totalItem: 0,
+  };
+},
+
+
 }
 </script>
 
 <style>
 .card {
     background-color: rgb(187, 168, 129);
-    height: 500px;
-    margin: 10px auto;
+    margin: 30;
+    padding: 30;
+
 }
 
 img {
-    width:40vh
+    width:50vh;
+    height: 40vh;
 }
 </style>
