@@ -6,7 +6,6 @@ import ShoppingCart from
         <h3>${{ price }}</h3>
         <img :src="img" alt="" />
         <p>{{ info }}</p>
-        <button>Add</button>
     </div>
 </template>
 
