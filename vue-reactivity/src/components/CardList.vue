@@ -6,10 +6,13 @@ import ShoppingCart from
         <h3>${{ price }}</h3>
         <img :src="img" alt="" />
         <p>{{ info }}</p>
+        <AddItem @click="add">Add to Cart</AddItem>
     </div>
 </template>
 
 <script>
+import AddItem from "./AddItem.vue";
+
 export default {
     name: "Card",
     props: {
@@ -24,7 +27,15 @@ data() {
 totalItem: 0,
   };
 },
-
+components: {
+    AddItem,
+  },
+  methods: {
+    test() {
+      this.shop.cart.push(this.name, this.price);
+      console.log(this.shop.cart);
+    },
+  },
 
 }
 </script>
