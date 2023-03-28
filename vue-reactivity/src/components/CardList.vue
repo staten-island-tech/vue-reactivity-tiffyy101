@@ -1,5 +1,3 @@
-import ShoppingCart from
-
 <template>
     <div class="card">
         <h2>{{ name }}</h2>
@@ -42,7 +40,7 @@ components: {
 
 <style>
 .card {
-    background-color: rgb(187, 168, 129);
+    background-color: rgb(227, 202, 152);
     margin: 30;
     padding: 30;
 
