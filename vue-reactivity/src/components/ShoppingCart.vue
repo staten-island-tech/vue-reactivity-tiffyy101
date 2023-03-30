@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import CartButton from "./CartButton.vue"
+import AddItem from "./AddItem.vue"
 export default {
     name: "Cart",
     props: {
@@ -19,7 +21,7 @@ export default {
     };
   },
   components: {
-
+    CartButton, AddItem
   },
   methods: {
 

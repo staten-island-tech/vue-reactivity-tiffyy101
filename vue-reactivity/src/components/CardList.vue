@@ -29,10 +29,6 @@ components: {
     AddItem,
   },
   methods: {
-    test() {
-      this.shop.cart.push(this.name, this.price);
-      console.log(this.shop.cart);
-    },
   },
 
 }
