@@ -1,5 +1,5 @@
 <template>
-        <button><slot></slot></button>
+        <router-link to="./ShoppingCart.vue" custom v-slot="{ navigate }"><button @click="navigate" role="link">Cart</button></router-link> 
 </template>
 
 <script>
