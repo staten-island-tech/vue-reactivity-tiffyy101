@@ -1,15 +1,14 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/about">Profile</router-link>
-    </div>
-    <router-view />
-  </div>
+  <HomeView />
 </template>
 
-<style>
-#app{
-  font-family: 'Mali', cursive;
-}</style>
+<script>
+import HomeView from "./views/HomeView.vue";
+
+export default {
+  name: "App",
+  components: {
+    HomeView,
+  },
+};
+</script>

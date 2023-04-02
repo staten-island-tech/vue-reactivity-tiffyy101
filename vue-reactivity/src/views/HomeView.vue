@@ -9,20 +9,31 @@ v-for="foods in menu"
 :info="foods.info"/>
 </div>
 
+<div class="cart">
+    <CartList
+        v-for="foods in menu"
+        :key="foods.name"
+        :name="foods.name"
+        :price="foods.price"
+      />
+</div>
+
 </template>
  
 <script>
+import { store } from "../components/store";
 import Card from "../components/CardList.vue"
 import CartButton from "../components/CartButton.vue"
-import AddItem from "../components/AddItem.vue"
+import CartList from "../components/CartList.vue"
 import Cart from "../components/ShoppingCart.vue"
 export default {
   name: "Home",
   components: {
-    Card, CartButton, AddItem, Cart, 
+    Card, CartButton, CartList, Cart, 
   },
   data() {
     return{
+        store,
       selected:"",
       menu: [
         {

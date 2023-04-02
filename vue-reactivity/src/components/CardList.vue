@@ -4,12 +4,13 @@
         <h3>${{ price }}</h3>
         <img :src="img" alt="" />
         <p>{{ info }}</p>
-        <AddItem @click="add">Add to Cart</AddItem>
+        <CartButton @click="add">Add to Cart</CartButton>
     </div>
 </template>
 
 <script>
-import AddItem from "./AddItem.vue";
+import { store } from "./store";
+import CartButton from "./CartButton.vue"
 
 export default {
     name: "Card",
@@ -22,16 +23,20 @@ export default {
 
 data() {
     return{
-totalItem: 0,
+        store,
   };
 },
 components: {
-    AddItem,
+    CartButton
   },
   methods: {
+    add: function () {
+        store.cart.push(`${this.name}` + `${this.price}`);
+        console.log(store.cart);
+    },
   },
+};
 
-}
 </script>
 
 <style>

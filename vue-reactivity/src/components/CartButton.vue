@@ -1,21 +1,11 @@
 <template>
-        <router-link to="./ShoppingCart.vue" custom v-slot="{ navigate }"><button @click="navigate" role="link">Cart</button></router-link> 
+  <button>Add to Cart</button>
 </template>
 
 <script>
 export default {
   name: "CartButton",
-
-  data() {
-    return{
-totalItem: 0,
-  };
-},
-methods: {
-
-}
 };
-
 </script>
 
 <style>
