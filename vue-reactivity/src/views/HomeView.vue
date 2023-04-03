@@ -1,40 +1,42 @@
-<template>
-<div class="home">
+<template> 
+<h1>Best Bagel Shop</h1>
+<div class="home">       
+    <div class="first">
 <Card
 v-for="foods in menu" 
 :key="foods.name"
 :name="foods.name"
 :price="foods.price"
-:img="foods.img"
-:info="foods.info"/>
+:img="foods.img"/>
+</div>
 </div>
 
 <div class="cart">
-    <CartList
-        v-for="foods in menu"
-        :key="foods.name"
-        :name="foods.name"
-        :price="foods.price"
+    <div class="second">
+    <h1>Your Cart</h1>
+      <Cart
+        v-for="food in store.cart"
+        :key="food.name"
+        :name="food.name"
+        :price="food.price"
       />
 </div>
-
+</div>
 </template>
  
 <script>
 import { store } from "../components/store";
 import Card from "../components/CardList.vue"
-import CartButton from "../components/CartButton.vue"
-import CartList from "../components/CartList.vue"
 import Cart from "../components/ShoppingCart.vue"
 export default {
   name: "Home",
   components: {
-    Card, CartButton, CartList, Cart, 
+    Card, Cart, 
   },
   data() {
     return{
         store,
-      selected:"",
+        carts: [],
       menu: [
         {
       name: "OG Bagel",
@@ -148,4 +150,25 @@ export default {
   }};
 </script>
 <style>
+html,
+body,
+* {
+  text-align: center;
+  color: rgb(70, 48, 18);
+}
+
+.home {
+    font-size: 15px;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.first {
+    display: flex;
+    flex-grow: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15;
+    margin: 20;
+}
 </style>

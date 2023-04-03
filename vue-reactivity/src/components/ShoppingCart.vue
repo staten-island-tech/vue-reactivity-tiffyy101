@@ -1,43 +1,33 @@
 <template>
 <div class="cart">
-    <CartButton v-if="toggled" @click="toggleCart" title="Hide Cart" />
-    <CartButton v-else @click="toggleCart" title="Show Cart" />
-    <div v-if="toggled">
-      <CartList
-        v-for="food in store.cart"
-        :key="food.name"
-        :name="food.name"
-        :price="food.price"
-      />
+  <div v-show="itemsInCart" class="items">
+      <h2>{{ name }}</h2>
+      <h3>${{ price }}</h3>
+      <remove @click="itemsInCart = !itemsInCart">Remove</remove>
     </div>
-    <h2 id="total">TOTAL: ${{ store.total }}</h2>
   </div>
 </template>
 
 <script>
-import { store } from "./store";
-import CartButton from "./CartButton.vue";
-import CartList from "./CartList.vue";
+import RemoveButton from "./RemoveButton.vue";
 export default {
     name: "Cart",
-
+    props: {
+      name: String,
+      price: Number,
+    },
     data() {
     return {
-      store,
-      toggled: false,
+      total: 1,
+      itemsInCart: true,
     };
   },
   components: {
-    CartButton, CartList
+    RemoveButton
   },
   methods: {
-    toggleCart: function () {
-      if (this.toggled === false) {
-        this.toggled = true;
-      } else this.toggled = false;
-    },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

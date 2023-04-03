@@ -30,9 +30,12 @@ components: {
     CartButton
   },
   methods: {
-    add: function () {
-        store.cart.push(`${this.name}` + `${this.price}`);
-        console.log(store.cart);
+    add() {
+      this.store.cart.push({
+        name: this.name,
+        price: this.price,
+        image: this.img,
+      });
     },
   },
 };
@@ -41,14 +44,16 @@ components: {
 
 <style>
 .card {
+    text-align: center;
     background-color: rgb(227, 202, 152);
     margin: 30;
     padding: 30;
-
+    border-radius: 40px;
 }
 
 img {
-    width:50vh;
-    height: 40vh;
+    width:52vh;
+    height: 42vh;
+    border-radius: 30px;
 }
 </style>
