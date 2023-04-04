@@ -14,8 +14,8 @@
   };
   </script>
   
-  <style>
+<style>
 .remove {
     color: red;
 }
-  </style>
+</style>

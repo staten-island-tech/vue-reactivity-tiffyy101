@@ -45,15 +45,14 @@ components: {
 <style>
 .card {
     text-align: center;
-    background-color: rgb(227, 202, 152);
-    margin: 30;
-    padding: 30;
-    border-radius: 40px;
 }
 
 img {
-    width:52vh;
-    height: 42vh;
-    border-radius: 30px;
+    width:55vh;
+    height: 50vh;
+    border-radius: 30px;    
+    margin: 30;
+    padding: 30;
+    border-color: burlywood;
 }
 </style>

@@ -3,7 +3,7 @@
   <div v-show="itemsInCart" class="items">
       <h2>{{ name }}</h2>
       <h3>${{ price }}</h3>
-      <remove @click="itemsInCart = !itemsInCart">Remove</remove>
+      <remove class="remove" @click="itemsInCart = !itemsInCart">Remove</remove>
     </div>
   </div>
 </template>
@@ -30,5 +30,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.remove {
+  color: red;
+}
 </style>

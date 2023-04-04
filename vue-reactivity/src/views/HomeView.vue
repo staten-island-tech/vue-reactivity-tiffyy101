@@ -155,20 +155,17 @@ body,
 * {
   text-align: center;
   color: rgb(70, 48, 18);
+  background-color: antiquewhite;
 }
 
 .home {
-    font-size: 15px;
-    width: 100vw;
-    flex-direction: row;
+  display: flex;
+    width: 90vw;
 }
 
 .first {
     display: flex;
-    flex-grow: 3;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 15;
-    margin: 20;
 }
 </style>

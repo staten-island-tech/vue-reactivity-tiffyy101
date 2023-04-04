@@ -16,5 +16,6 @@ export default {
 .add{
   color: rgb(90, 49, 19);
   border-radius: 8px;
+  border-color: sienna;
 }
 </style>
